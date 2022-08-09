@@ -1,0 +1,45 @@
+<html>
+    <head>
+<title>simple calculator</title>
+    </head>
+    <body>
+        <h3>simple calculator</h3>
+        <input type="number" id="number1" >
+        <select id="char">
+            <option value="1" >+</option>
+            <option value="2">*</option>
+            <option value="3">/</option>
+            <option value="4">-</option>
+        </select>
+        <input type="number"  id="number2" >
+        <button id="result" onclick="Rslt()">result</button>
+        <script>
+            var Result = document.getElementById("result");
+            
+            var operator = document.getElementById("char");
+            Result.addEventListener('click',Rslt);
+            function Rslt(){
+                var nmb1 = document.getElementById("number1").value;
+            var nmb2 = document.getElementById("number2").value;
+            debugger;
+            var text  = operator.value;
+            var rslt;
+            if(text == 1){
+                rslt =Number(nmb1) + Number(nmb2);
+                alert(rslt); 
+            }else if(text == 2){
+                rslt = Number(nmb1)-Number(nmb2);
+                alert(rslt);
+            }else if( text == 3){
+                rslt = Number(nmb1)/Number(nmb2);
+                alert(rslt);
+            }else if( text == 4){
+                rslt = Number(nmb1)*(nmb2);
+                alert(rslt);
+            }else{
+                alert("nothing");
+            }
+            }
+        </script>
+    </body>
+</html>
